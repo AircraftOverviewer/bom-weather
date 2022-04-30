@@ -1,5 +1,5 @@
 export interface Warnings {
-	data: string[];
+	data: unknown[]; // Unknown Type - No docs
 	metadata: WarningsMetadata;
 }
 
