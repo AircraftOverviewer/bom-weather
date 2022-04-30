@@ -1,8 +1,8 @@
 import fetch from 'axios';
-import type { Observation, Warnings, DailyForecast, ThreeHourForecast, RainForecast } from './structures';
+import type { DailyForecast, Observation, RainForecast, ThreeHourForecast, Warnings } from './structures';
 
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
-export default class BOM {
+export class BOM {
 	/**
 	 *
 	 * Get the Observational Data of a geohash
