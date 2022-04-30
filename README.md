@@ -1,12 +1,10 @@
-# bom-weather-test
+# bom-weather
 A simple package to receive data from the [Australian Bureau of Meteorology](http://www.bom.gov.au/) API.
 
 ## How to Use
-All available API calls can be made off the `Client` class
+All available API calls can be made off the `BOM` class
 ```ts
-import BOM from 'bom-weather-test';
-
-const client = new BOM.Client('DEFAULT_CITY_GEOHASH');
+import BOM from 'bom-weather';
 ```
 The current list of endpoints available for each city are as follows:
 ```
@@ -18,7 +16,7 @@ The current list of endpoints available for each city are as follows:
 ```
 Enums have been included for Geohashes of all the major cities of Australia. These can be accessed using
 ```ts
-import BOM from 'bom-weather-test';
+import BOM from 'bom-weather';
 
 const geohashes = BOM.Enums.Cities;
 ```
