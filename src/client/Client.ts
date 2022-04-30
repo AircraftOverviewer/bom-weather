@@ -1,12 +1,14 @@
 import { Fetch } from '../utils/Fetch';
 import type { DailyForecast, Observation, RainForecast, ThreeHourForecast, Warnings } from './structures';
 
+/**
+ * A static class with all BOM API endpoints
+ */
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export class BOM {
 	/**
-	 *
 	 * Get the Observational Data of a geohash
-	 * @public @static @param {string} geohash The geohash to collect data from
+	 * @param {string} geohash The geohash to use in the endpoint
 	 * @returns {Observation} An `Observation` object
 	 */
 	public static async getObservations(geohash: string): Promise<Observation> {
@@ -19,7 +21,7 @@ export class BOM {
 
 	/**
 	 * Get the Warnings Data of a geohash
-	 * @public @static @param {string} geohash The geohash to collect data from
+	 * @param {string} geohash The geohash to use in the endpoint
 	 * @returns {Warnings} A `Warnings` object
 	 */
 	public static async getWarnings(geohash: string): Promise<Warnings> {
@@ -32,7 +34,7 @@ export class BOM {
 
 	/**
 	 * Get the Daily Forecast of a geohash
-	 * @public @static @param {string} geohash The geohash to collect data from
+	 * @param {string} geohash The geohash to use in the endpoint
 	 * @returns {DailyForecast} A `DailyForecast` object
 	 */
 	public static async getDailyForecast(geohash: string): Promise<DailyForecast> {
@@ -45,7 +47,7 @@ export class BOM {
 
 	/**
 	 * Get the Three Hour Forecast of a geohash
-	 * @public @static @param {string} geohash The geohash to collect data from
+	 * @param {string} geohash The geohash to use in the endpoint
 	 * @returns {ThreeHourForecast} A `ThreeHourForecast` object
 	 */
 	public static async getThreeHourForecast(geohash: string): Promise<ThreeHourForecast> {
@@ -58,7 +60,7 @@ export class BOM {
 
 	/**
 	 * Get the Rain Forecast of a geohash
-	 * @public @static @param {string} geohash The geohash to collect data from
+	 * @param {string} geohash The geohash to use in the endpoint
 	 * @returns {RainForecast} A `RainForecast` object
 	 */
 	public static async getRainForecast(geohash: string): Promise<RainForecast> {
