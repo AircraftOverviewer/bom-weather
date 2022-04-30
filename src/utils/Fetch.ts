@@ -1,7 +1,7 @@
 import { fetch, RequestInit } from 'undici';
 
 /* eslint-disable @typescript-eslint/no-extraneous-class */
-export class Nico {
+export class Fetch {
 	private static rootAPI = 'https://api.weather.bom.gov.au/v1';
 
 	public static get<type>(route: string, options?: RequestInit): Promise<type> {
