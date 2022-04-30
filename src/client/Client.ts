@@ -1,4 +1,4 @@
-import fetch from 'axios';
+import { Nico } from '../utils/Nico';
 import type { DailyForecast, Observation, RainForecast, ThreeHourForecast, Warnings } from './structures';
 
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
@@ -11,7 +11,7 @@ export class BOM {
 	 */
 	public static async getObservations(geohash: string): Promise<Observation> {
 		try {
-			return (await fetch(`https://api.weather.bom.gov.au/v1/locations/${geohash}/observations`)).data as Observation;
+			return await Nico.get<Observation>(`/locations/${geohash}/observations`);
 		} catch {
 			throw new Error('[BOMApiError] - An Invalid Geohash was provided');
 		}
@@ -24,7 +24,7 @@ export class BOM {
 	 */
 	public static async getWarnings(geohash: string): Promise<Warnings> {
 		try {
-			return (await fetch(`https://api.weather.bom.gov.au/v1/locations/${geohash}/warnings`)).data as Warnings;
+			return await Nico.get<Warnings>(`/locations/${geohash}/warnings`);
 		} catch {
 			throw new Error('[BOMApiError] - An Invalid Geohash was provided');
 		}
@@ -37,7 +37,7 @@ export class BOM {
 	 */
 	public static async getDailyForecast(geohash: string): Promise<DailyForecast> {
 		try {
-			return (await fetch(`https://api.weather.bom.gov.au/v1/locations/${geohash}/forecasts/daily`)).data as DailyForecast;
+			return await Nico.get<DailyForecast>(`/locations/${geohash}/forecasts/daily`);
 		} catch {
 			throw new Error('[BOMApiError] - An Invalid Geohash was provided');
 		}
@@ -50,7 +50,7 @@ export class BOM {
 	 */
 	public static async getThreeHourForecast(geohash: string): Promise<ThreeHourForecast> {
 		try {
-			return (await fetch(`https://api.weather.bom.gov.au/v1/locations/${geohash}/forecasts/3-hourly`)).data as ThreeHourForecast;
+			return await Nico.get<ThreeHourForecast>(`/locations/${geohash}/forecasts/3-hourly`);
 		} catch {
 			throw new Error('[BOMApiError] - An Invalid Geohash was provided');
 		}
@@ -63,7 +63,7 @@ export class BOM {
 	 */
 	public static async getRainForecast(geohash: string): Promise<RainForecast> {
 		try {
-			return (await fetch(`https://api.weather.bom.gov.au/v1/locations/${geohash}/forecast/rain`)).data as RainForecast;
+			return await Nico.get<RainForecast>(`/locations/${geohash}/forecast/rain`);
 		} catch {
 			throw new Error('[BOMApiError] - An Invalid Geohash was provided');
 		}

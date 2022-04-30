@@ -1,9 +1,23 @@
 {
 	"name": "bom-weather",
-	"version": "1.1.0",
+	"version": "1.1.2",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"license": "MIT",
+	"contributors": [
+		"Aircraft Overviewer <maltesers42@gmail.com>",
+		"Tristan Camejo <contact@tristancamejo.com>"
+	],
+	"keywords": [
+		"weather",
+		"bom",
+		"bom-weather"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AircraftOverviewer/bom-weather.git"
+	},
+	"homepage": "https://github.com/AircraftOverviewer/bom-weather#readme",
 	"scripts": {
 		"lint": "eslint src --ext ts --fix",
 		"test": "tsc -b src && node dist/tests/index.js",
@@ -33,9 +47,6 @@
 		"tsc-watch": "^5.0.3",
 		"typescript": "^4.6.4"
 	},
-	"dependencies": {
-		"axios": "^0.27.2"
-	},
 	"prettier": "@sapphire/prettier-config",
 	"eslintConfig": {
 		"extends": "@sapphire"
@@ -51,5 +62,8 @@
 			"git add"
 		]
 	},
-	"packageManager": "yarn@3.2.0"
+	"packageManager": "yarn@3.2.0",
+	"dependencies": {
+		"undici": "^5.0.0"
+	}
 }
