@@ -23,7 +23,7 @@ export interface DailyForecastData {
 	extended_text: string;
 	short_text: string;
 	icon_descriptor: string;
-	fire_danger: string;
+	fire_danger?: string;
 }
 
 export interface DailyForecastDataRain {
@@ -35,10 +35,10 @@ export interface DailyForecastDataRain {
 }
 
 export interface DailyForecastDataUV {
-	category: null;
-	end_time: null;
-	max_index: null;
-	start_time: null;
+	start_time?: Date;
+	end_time?: Date;
+	category?: unknown;
+	max_index?: number;
 }
 
 export interface DailyForecastDataRainAmount {
