@@ -1,0 +1,51 @@
+{
+	"name": "bom-weather",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc -b src && rollup -c scripts/rollup.bundle.ts && gen-esm-wrapper dist/index.js dist/index.mjs",
+		"prepublishOnly": "yarn build",
+		"sversion": "standard-version",
+		"lint": "eslint src --ext ts --fix",
+		"prepare": "husky install .github/husky"
+	},
+	"devDependencies": {
+		"@sapphire/eslint-config": "^4.3.4",
+		"@sapphire/prettier-config": "^1.4.3",
+		"@sapphire/ts-config": "^3.3.4",
+		"@typescript-eslint/eslint-plugin": "^5.21.0",
+		"@typescript-eslint/parser": "^5.21.0",
+		"eslint": "^8.14.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"gen-esm-wrapper": "^1.1.3",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.4.1",
+		"rollup": "^2.70.2",
+		"rollup-plugin-version-injector": "^1.3.3",
+		"standard-version": "^9.3.2",
+		"ts-node": "^10.7.0",
+		"ts-node-dev": "^1.1.8",
+		"typescript": "^4.6.4"
+	},
+	"dependencies": {
+		"axios": "^0.27.2"
+	},
+	"prettier": "@sapphire/prettier-config",
+	"eslintConfig": {
+		"extends": "@sapphire"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn lint"
+		}
+	},
+	"lint-staged": {
+		"apps/bot/src/*/.ts": [
+			"eslint --fix",
+			"git add"
+		]
+	}
+}
