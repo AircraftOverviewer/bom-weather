@@ -39,8 +39,6 @@ jobs:
         run: yarn --immutable
       - name: Bump Version & Publish
         run: |
-          # Bump the version
-          yarn standard-version --skip.commit --skip.tag --prerelease "${TAG}.$(git rev-parse --verify --short HEAD)"
           # Publish to NPM
           npm publish || true
         env:
