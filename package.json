@@ -4,6 +4,20 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"license": "MIT",
+	"contributors": [
+		"Aircraft Overviewer <maltesers42@gmail.com>",
+		"Tristan Camejo <contact@tristancamejo.com>"
+	],
+	"keywords": [
+		"weather",
+		"bom",
+		"bom-weather"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AircraftOverviewer/bom-weather.git"
+	},
+	"homepage": "https://github.com/AircraftOverviewer/bom-weather#readme",
 	"scripts": {
 		"lint": "eslint src --ext ts --fix",
 		"test": "tsc -b src && node dist/tests/index.js",
