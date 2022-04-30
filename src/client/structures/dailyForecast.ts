@@ -1,3 +1,5 @@
+import type { ForecastIconIndicator } from './global';
+
 export interface DailyForecast {
 	metadata: DailyForecastMetadata;
 	data: DailyForecastData[];
@@ -22,7 +24,7 @@ export interface DailyForecastData {
 	temp_min: number | null;
 	extended_text: string;
 	short_text: string;
-	icon_descriptor: string;
+	icon_descriptor: ForecastIconIndicator;
 	fire_danger: string | null;
 }
 

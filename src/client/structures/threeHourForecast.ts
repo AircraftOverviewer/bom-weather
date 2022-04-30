@@ -1,3 +1,5 @@
+import type { ForecastIconIndicator } from './global';
+
 export interface ThreeHourForecast {
 	metadata: ThreeHourForecastMetadata;
 	data: ThreeHourForecastData[];
@@ -13,7 +15,7 @@ export interface ThreeHourForecastData {
 	rain: ThreeHourForecastDataRain;
 	wind: ThreeHourForecastDataWind;
 	temp: number;
-	icon_descriptor: string;
+	icon_descriptor: ForecastIconIndicator;
 	time: Date;
 	is_night: boolean;
 	next_forecast_period: Date;
