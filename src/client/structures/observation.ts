@@ -12,9 +12,9 @@ export interface ObservationMetadata {
 
 export interface ObservationData {
 	temp: number;
-	temp_feels_like: number;
-	wind: ObservationDataWind;
-	gust: ObservationDataGust;
+	temp_feels_like: number | null;
+	wind: ObservationDataWind | null;
+	gust: ObservationDataGust | null;
 	rain_since_9am: number;
 	humidity: number;
 	station: ObservationDataStation;

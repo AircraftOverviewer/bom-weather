@@ -1,5 +1,5 @@
-import { BOM, Cities } from '../index';
+import { BOM } from '../index';
 
 (async () => {
-	console.log(await BOM.getObservations(Cities.SYDNEY));
+	console.log(await BOM.getWarnings('r68mtc'));
 })().catch(console.error);

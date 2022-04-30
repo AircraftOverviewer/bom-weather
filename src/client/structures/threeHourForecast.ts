@@ -32,6 +32,6 @@ export interface ThreeHourForecastDataWind {
 
 export interface ThreeHourForecastDataRainAmount {
 	min: number;
-	max?: number;
+	max: number | null;
 	units: string;
 }

@@ -19,11 +19,11 @@ export interface DailyForecastData {
 	now: DailyForecastDataNow;
 	date: Date;
 	temp_max: number;
-	temp_min?: number;
+	temp_min: number | null;
 	extended_text: string;
 	short_text: string;
 	icon_descriptor: string;
-	fire_danger?: string;
+	fire_danger: string | null;
 }
 
 export interface DailyForecastDataRain {
@@ -35,10 +35,10 @@ export interface DailyForecastDataRain {
 }
 
 export interface DailyForecastDataUV {
-	start_time?: Date;
-	end_time?: Date;
-	category?: unknown;
-	max_index?: number;
+	start_time: Date | null;
+	end_time: Date | null;
+	category: unknown | null;
+	max_index: number | null;
 }
 
 export interface DailyForecastDataRainAmount {

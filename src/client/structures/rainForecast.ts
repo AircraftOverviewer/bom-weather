@@ -9,8 +9,8 @@ export interface RainForecastMetadata {
 }
 
 export interface RainForecastData {
-	amount?: number;
-	chance?: number;
-	start_time?: Date;
+	amount: number | null;
+	chance: number | null;
+	start_time: Date | null;
 	period: string;
 }
