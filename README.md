@@ -32,4 +32,4 @@ import { BOM, Cities } from 'bom-weather';
 await BOM.getObservations(Cities.SYDNEY);
 ```
 ## Disclaimer
-*Please Note: This package is meant for test purposes only. Under no circumstances is this API to be used for commercial purposes. Please contact [BOM](http://www.bom.gov.au/) directly to get permission to use a commercial license*
+*Please Note: This package is meant for test purposes only. Under no circumstances is this API to be used for commercial or monetary purposes. Please contact [BOM](http://www.bom.gov.au/) directly to get access to a commercial license. All contributors on this package are in no way liable for any legal action taken against those misusing this API. By using this package you are acknowledging this disclaimer and agree to take personal responsibility to any misuse of this API*
