@@ -39,7 +39,7 @@ export interface DailyForecastDataRain {
 export interface DailyForecastDataUV {
 	start_time: Date | null;
 	end_time: Date | null;
-	category: unknown | null;
+	category: string | null;
 	max_index: number | null;
 }
 
@@ -63,31 +63,3 @@ export interface DailyForecastDataNow {
 	temp_now: number;
 	temp_later: number;
 }
-
-export type DailyForecastDataIconIndicator =
-	| 'sunny'
-	| 'clear'
-	| 'partly_cloudy'
-	| 'cloudy'
-	| 'mostly_sunny'
-	| 'haze'
-	| 'hazy'
-	| 'light_rain'
-	| 'wind'
-	| 'windy'
-	| 'fog'
-	| 'shower'
-	| 'showers'
-	| 'rain'
-	| 'dust'
-	| 'dusty'
-	| 'frost'
-	| 'snow'
-	| 'storm'
-	| 'storms'
-	| 'light_shower'
-	| 'light_showers'
-	| 'heavy_shower'
-	| 'heavy_showers'
-	| 'tropical_cyclone'
-	| 'cyclone';
